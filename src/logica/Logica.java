@@ -16,7 +16,7 @@ public class Logica {
     /* Singleton, el constructor es privado, la instancia es el unico que va a existir*/
     private static Logica instancia = new Logica();
     
-    private static Logica getInstancia(){
+    public static Logica getInstancia(){
         return instancia;
     }
     
@@ -31,6 +31,12 @@ public class Logica {
     public Usuario login(String nombre, String pass) {
         return su.login(nombre, pass);
     }
+
+    public void agregarUsuario(Usuario u) {
+        su.agregarUsuario(u);
+    }
+    
+    
     
     
     

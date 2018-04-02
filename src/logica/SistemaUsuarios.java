@@ -32,6 +32,12 @@ public class SistemaUsuarios {
     }
     
     
+    public void agregarUsuario(Usuario u)
+    {
+        usuarios.add(u);
+    }
+    
+    
     
     
 }

@@ -5,6 +5,9 @@
  */
 package iu;
 
+import logica.Logica;
+import logica.Usuario;
+
 /**
  *
  * @author alex
@@ -15,7 +18,20 @@ public class Inicio {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        
+        cargarDatos();
+        
+        
+        /* Genero una ventana de login*/
+        new Login(null, false).setVisible(true);
+    }
+
+    private static void cargarDatos() {
+       
+        Logica logica = Logica.getInstancia();
+        logica.agregarUsuario(new Usuario("Peter", "password"));
+        logica.agregarUsuario(new Usuario("Jack", "1234"));
     }
     
 }
