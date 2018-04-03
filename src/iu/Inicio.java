@@ -6,6 +6,7 @@
 package iu;
 
 import logica.Logica;
+import logica.Tipo;
 import logica.Usuario;
 
 /**
@@ -32,6 +33,8 @@ public class Inicio {
         Logica logica = Logica.getInstancia();
         logica.agregarUsuario(new Usuario("Peter", "password"));
         logica.agregarUsuario(new Usuario("Jack", "1234"));
+        logica.agregarTipo(new Tipo("Simple"));
+        logica.agregarTipo(new Tipo("Circular"));
+        logica.agregarTipo(new Tipo("Aleatoria"));
     }
-    
 }

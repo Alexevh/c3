@@ -57,8 +57,6 @@ public class Login extends javax.swing.JDialog {
         });
         getContentPane().add(txtNombre);
         txtNombre.setBounds(110, 40, 160, 27);
-
-        txtPass.setText("jPasswordField1");
         getContentPane().add(txtPass);
         txtPass.setBounds(110, 80, 160, 27);
 
@@ -100,7 +98,8 @@ public class Login extends javax.swing.JDialog {
             JOptionPane.showMessageDialog(this, "error");
         } else 
         {
-            JOptionPane.showMessageDialog(this, "bienvenido");
+            dispose();
+            new AltaPublicidad(null, false).setVisible(true);
         }
         
     }

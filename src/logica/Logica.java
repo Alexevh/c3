@@ -5,6 +5,8 @@
  */
 package logica;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author alex
@@ -12,6 +14,7 @@ package logica;
 public class Logica {
     
     private SistemaUsuarios su = new SistemaUsuarios();
+    private SistemaPublicidad sp = new SistemaPublicidad();
     
     /* Singleton, el constructor es privado, la instancia es el unico que va a existir*/
     private static Logica instancia = new Logica();
@@ -35,6 +38,23 @@ public class Logica {
     public void agregarUsuario(Usuario u) {
         su.agregarUsuario(u);
     }
+
+    public boolean agregarPublicidad(Publicidad p) {
+        return sp.agregarPublicidad(p);
+    }
+
+    public void agregarTipo(Tipo t) {
+        sp.agregarTipo(t);
+    }
+
+    public ArrayList<Publicidad> getPublicidades() {
+        return sp.getPublicidades();
+    }
+
+    public ArrayList<Tipo> getTipos() {
+        return sp.getTipos();
+    }
+    
     
     
     
